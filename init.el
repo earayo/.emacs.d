@@ -61,6 +61,7 @@
 
     ;; colorful parenthesis matching
     rainbow-delimiters
+    rainbow-mode
 
     ;; edit html tags like sexps
     tagedit
@@ -198,3 +199,17 @@
 ;; (setq grep-program "c:/cygwin/bin/grep.exe")
 
 ;;(setq grep-find-template " c:/cygwin/bin/find . <X> -type f <F> -exec /usr/bin/grep <C> --regexp=<R> --with-filename --line-number --color=always {} +")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (rainbow-mode which-key tagedit smex rainbow-delimiters neotree magit helm-themes helm-projectile find-file-in-project expand-region company-flx clojure-mode-extra-font-locking clj-refactor))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
