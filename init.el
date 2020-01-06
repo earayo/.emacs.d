@@ -4,13 +4,14 @@
 
 ;; Define package repositories
 (require 'package)
+(setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
+;; keep the installed packages in .emacs.d
+(setq package-user-dir (expand-file-name "elpa" user-emacs-directory))
+;; (package-initialize) It should be used first time
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
@@ -48,7 +49,7 @@
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
-    ido-ubiquitous
+    ;; ido-ubiquitous
 
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
@@ -86,13 +87,16 @@
     ;; Cool mode suggested by the cider guy
     which-key
 
+    helm
     helm-projectile
+    helm-themes
     
     ;; Refactor namespace declarations. Doesn't work. See:
     ;;https://github.com/clojure-emacs/cider/blob/master/CHANGELOG.md
     ;; Problem is due to nrepl-send-string -> nrepl-request:eval
     ;; slamhound
-    ))
+
+    find-file-in-project))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -105,9 +109,22 @@
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+;; Load all the packages!
+(when (= 0 (seq-count (lambda (package) (package-installed-p package)) my-packages))
+  (package-refresh-contents))
+
+(mapc (lambda (package)
+        (unless (package-installed-p package)
+          (package-install package)))
+      my-packages)
+
+;; find in project
+(setq ffip-match-path-instead-of-filename t)
+(global-set-key [(meta p)] 'find-file-in-project-by-selected)
+
+;; (dolist (p my-packages)
+;;   (when (not (package-installed-p p))
+;;     (package-install p)))
 
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
