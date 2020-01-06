@@ -32,16 +32,24 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-;;(load-theme 'tomorrow-night-bright t)
-;;(load-theme 'zenburn t)
-(load-theme 'monokai t)
+;; (load-theme 'tomorrow-night-bright t)
+;; (load-theme 'tomorrow-night-blue t)
+;; (load-theme 'tomorrow-night t)
+;; (load-theme 'tomorrow-night-eighties t)
+;; (load-theme 'monokai t)
+;; Additionally, you can use themes installed by the emacs setup
+;; (load-theme 'whiteboard)
+;; (load-theme 'wheatgrass t)
+(load-theme 'wombat t)
+
+
 
 ;; increase font size for better readability
 ;; (set-face-attribute 'default nil :height 110)
 (set-face-attribute 'default nil :height 140)
 
 ;; set font to something not ugly
-(set-face-attribute 'default nil :font "Consolas" )
+(set-face-attribute 'default nil :font "Dejavu Sans Mono")
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
@@ -86,3 +94,6 @@
 (setq projectile-switch-project-action 'neotree-projectile-action)
 
 (global-set-key [f8] 'neotree-toggle)
+
+;; no tabs
+(setq-default indent-tabs-mode nil)
