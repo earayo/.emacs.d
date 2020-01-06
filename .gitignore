@@ -15,3 +15,5 @@ projectile-bookmarks.eld
 projectile.cache
 *~
 .emacs.desktop
+session.*
+transient/*
