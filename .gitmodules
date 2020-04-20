@@ -1,3 +1,6 @@
 [submodule "go-mode"]
 	path = libs/go-mode
 	url = git@github.com:dominikh/go-mode.el.git
+[submodule "go-errcheck"]
+	path = libs/go-errcheck
+	url = git@github.com:dominikh/go-errcheck.el.git
