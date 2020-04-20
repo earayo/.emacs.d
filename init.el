@@ -20,6 +20,19 @@
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
 (package-initialize)
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Creates helper functions
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;
+(defconst +emacs-dir+ "~/.emacs.d")
+(defconst +emacs-lib-dir+ (concat +emacs-dir+ "/libs"))
+
+(defun add-load-path (p)
+  (add-to-list 'load-path (concat +emacs-dir+ "/" p)))
+
+(defun add-lib-path (p)
+  (add-to-list 'load-path (concat +emacs-lib-dir+ "/" p)))
+
+
 
 ;; Download the ELPA archive description if needed.
 ;; This informs Emacs about the latest versions of all packages, and
@@ -141,6 +154,11 @@
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+;; ;;;;;;;;;;;;;;;
+;; Load libs
+;; ;;;;;;;;;;;;;;;
+(add-load-path "lib")
+
 
 ;;;;
 ;; Customization
@@ -173,6 +191,7 @@
 
 ;; Langauage-specific
 (load "setup-clojure.el")
+(load "setup-golang.el")
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
