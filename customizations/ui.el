@@ -40,8 +40,9 @@
 ;; Additionally, you can use themes installed by the emacs setup
 ;; (load-theme 'whiteboard)
 ;; (load-theme 'wheatgrass t)
-(load-theme 'wombat t)
-
+;; (load-theme 'wombat t)
+;; (load-theme 'whiteboard t)
+(load-theme 'adwaita t)
 
 
 ;; increase font size for better readability
