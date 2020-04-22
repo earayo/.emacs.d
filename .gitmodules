@@ -7,3 +7,18 @@
 [submodule "gocode"]
 	path = libs/gocode
 	url = git@github.com:nsf/gocode.git
+[submodule "libs/js2-mode"]
+	path = libs/js2-mode
+	url = git@github.com:mooz/js2-mode.git
+[submodule "js2-refactor"]
+	path = libs/js2-refactor
+	url = git@github.com:magnars/js2-refactor.el.git
+[submodule "libs/flycheck"]
+	path = libs/flycheck
+	url = git@github.com:flycheck/flycheck.git
+[submodule "libs/xref-js2"]
+	path = libs/xref-js2
+	url = git@github.com:NicolasPetton/xref-js2.git
+[submodule "libs/auto-complete"]
+	path = libs/auto-complete
+	url = git@github.com:auto-complete/auto-complete.git

@@ -75,3 +75,23 @@
 
 ;; https://github.com/emacsmirror/expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+(add-lib-path "auto-complete")
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+(ac-flyspell-workaround)
+(add-to-list 'ac-dictionary-directories (concat +emacs-lib-dir+ "/auto-complete/dict"))
+
+(set-default 'ac-sources
+             '(ac-source-dictionary
+               ac-source-words-in-buffer
+               ac-source-words-in-same-mode-buffers
+               ac-source-words-in-all-buffer))
+
+;;Key triggers
+(ac-set-trigger-key "TAB")
+(define-key ac-completing-map (kbd "C-M-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-M-p") 'ac-previous)
+(define-key ac-completing-map "\t" 'ac-complete)
+(define-key ac-completing-map "\r" nil)

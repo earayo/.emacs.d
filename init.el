@@ -5,10 +5,11 @@
 ;; Define package repositories
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("tromey" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/") t)
+
+
 ;; keep the installed packages in .emacs.d
 (setq package-user-dir (expand-file-name "elpa" user-emacs-directory))
 ;; (package-initialize) It should be used first time
@@ -110,7 +111,12 @@
     ;; Problem is due to nrepl-send-string -> nrepl-request:eval
     ;; slamhound
 
-    find-file-in-project))
+    find-file-in-project
+
+    ;; Javascript
+    eslintd-fix
+    makey
+    tern))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -159,14 +165,14 @@
 ;; ;;;;;;;;;;;;;;;
 (add-load-path "lib")
 
-
 ;;;;
 ;; Customization
 ;;;;
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
-(add-to-list 'load-path "~/.emacs.d/customizations")
+;; (add-to-list 'load-path "~/.emacs.d/customizations")
+(add-load-path "customizations")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
@@ -192,6 +198,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-golang.el")
+(load "setup-javascript.el")
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
