@@ -35,14 +35,14 @@
 ;; (load-theme 'tomorrow-night-bright t)
 ;; (load-theme 'tomorrow-night-blue t)
 ;; (load-theme 'tomorrow-night t)
-;; (load-theme 'tomorrow-night-eighties t)
+(load-theme 'tomorrow-night-eighties t)
 ;; (load-theme 'monokai t)
 ;; Additionally, you can use themes installed by the emacs setup
 ;; (load-theme 'whiteboard)
 ;; (load-theme 'wheatgrass t)
 ;; (load-theme 'wombat t)
 ;; (load-theme 'whiteboard t)
-(load-theme 'adwaita t)
+;; (load-theme 'adwaita t)
 
 
 ;; increase font size for better readability

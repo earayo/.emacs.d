@@ -2,6 +2,7 @@
 (add-lib-path "go-mode")
 (add-lib-path "go-errcheck")
 (add-lib-path "gocode/emacs")
+(add-lib-path "flycheck")
 
 (require 'go-mode)
 (require 'go-autocomplete)
@@ -10,6 +11,10 @@
 
 
 (add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'after-save-hook
+          (lambda ()
+            (if (eq major-mode 'go-mode)
+                (flycheck-compile 'go-build))))
 
 (add-hook
  'go-mode-hook (lambda () (setq indent-tabs-mode t)))
@@ -22,9 +27,6 @@
 
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c m") 'go-errcheck)))
-
-(add-hook 'go-mode-hook (lambda ()
-                          (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c d") 'godoc-at-point)))

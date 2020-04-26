@@ -230,6 +230,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" default)))
+ '(js2-strict-inconsistent-return-warning nil)
+ '(js2-strict-missing-semi-warning nil)
  '(package-selected-packages
    (quote
     (rainbow-mode which-key tagedit smex rainbow-delimiters neotree magit helm-themes helm-projectile find-file-in-project expand-region company-flx clojure-mode-extra-font-locking clj-refactor))))
