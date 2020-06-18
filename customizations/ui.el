@@ -35,7 +35,7 @@
 ;; (load-theme 'tomorrow-night-bright t)
 ;; (load-theme 'tomorrow-night-blue t)
 ;; (load-theme 'tomorrow-night t)
-(load-theme 'tomorrow-night-eighties t)
+;; (load-theme 'tomorrow-night-eighties t)
 ;; (load-theme 'monokai t)
 ;; Additionally, you can use themes installed by the emacs setup
 ;; (load-theme 'whiteboard)
@@ -43,6 +43,8 @@
 ;; (load-theme 'wombat t)
 ;; (load-theme 'whiteboard t)
 ;; (load-theme 'adwaita t)
+;; (load-theme 'sanityinc-solarized-dark t)
+(load-theme 'sanityinc-solarized-light t)
 
 
 ;; increase font size for better readability

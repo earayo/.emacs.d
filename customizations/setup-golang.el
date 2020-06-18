@@ -8,6 +8,7 @@
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (require 'go-errcheck)
+(require 'flycheck-golangci-lint)
 
 
 (add-hook 'before-save-hook 'gofmt-before-save)
@@ -47,3 +48,6 @@
 
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c p") 'set-go-path)))
+
+(eval-after-load 'flycheck                                       
+  '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))

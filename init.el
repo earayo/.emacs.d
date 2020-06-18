@@ -116,7 +116,10 @@
     ;; Javascript
     eslintd-fix
     makey
-    tern))
+    tern
+
+    ;; Custom themes
+    color-theme-sanityinc-solarized))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -232,12 +235,12 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" default)))
+    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" default)))
  '(js2-strict-inconsistent-return-warning nil)
  '(js2-strict-missing-semi-warning nil)
  '(package-selected-packages
    (quote
-    (rainbow-mode which-key tagedit smex rainbow-delimiters neotree magit helm-themes helm-projectile find-file-in-project expand-region company-flx clojure-mode-extra-font-locking clj-refactor))))
+    (color-theme-sanityinc-solarized ac-cider flycheck-clj-kondo flycheck-golangci-lint ## go-gopath go-guru rainbow-mode which-key tagedit smex rainbow-delimiters neotree magit helm-themes helm-projectile find-file-in-project expand-region company-flx clojure-mode-extra-font-locking clj-refactor))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

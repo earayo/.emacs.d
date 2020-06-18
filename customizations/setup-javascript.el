@@ -32,9 +32,9 @@
   ;; add xref-js2 support
   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)
 
-  (setq js-indent-level 2)
-  (setq js2-indent-level 2)
-  (setq js2-basic-offset 2)
+  (setq js-indent-level 1)
+  (setq js2-indent-level 1)
+  (setq js2-basic-offset 1)
 
   (dolist (mode '(javascript-mode js2-mode js2-jsx-mode))
     (add-to-list 'ac-modes mode)))
