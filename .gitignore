@@ -17,3 +17,4 @@ projectile.cache
 .emacs.desktop
 session.*
 transient/*
+*.dat
