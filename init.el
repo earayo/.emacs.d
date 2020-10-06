@@ -65,6 +65,9 @@
     ;; of ido
     ;; ido-ubiquitous
 
+    ;; Linter for Clojure
+    flycheck-clj-kondo
+
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
     ;; http://www.emacswiki.org/emacs/Smex
@@ -72,6 +75,7 @@
 
     ;; project navigation
     projectile
+    org-projectile
 
     ;; colorful parenthesis matching
     rainbow-delimiters
@@ -119,7 +123,13 @@
     tern
 
     ;; Custom themes
-    color-theme-sanityinc-solarized))
+    color-theme-sanityinc-solarized
+
+    ;; golang
+    flycheck-golangci-lint
+    go-gopath
+    go-guru
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a

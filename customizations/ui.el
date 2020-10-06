@@ -43,8 +43,8 @@
 ;; (load-theme 'wombat t)
 ;; (load-theme 'whiteboard t)
 ;; (load-theme 'adwaita t)
-;; (load-theme 'sanityinc-solarized-dark t)
-(load-theme 'sanityinc-solarized-light t)
+(load-theme 'sanityinc-solarized-dark t)
+;; (load-theme 'sanityinc-solarized-light t)
 
 
 ;; increase font size for better readability

@@ -8,13 +8,19 @@ If you're new to emacs, check out
 This setup was a copy of [Mark Bastian](https://github.com/markbastian) setup and it has somethings based on
 [Azer Koçulu](https://github.com/azer) (Especially for golang)
 
+## Clone the repo
+Some libraries are git submodules. For this reason, you should use `git clone --recurse-submodules <repo_url>`
+when you try to clone this repo.
+
 ## Organization
 
 I've tried to separate everything logically and document the purpose
 of every line. [`init.el`](./init.el) acts as a kind of table of
 contents.  It's a good idea to eventually go through `init.el` and the
 files under the `customizations` directory so that you know exactly
-what's going on. Additionally, you can add other packages via `git submodule` when it's not able to retrieve them using melpa repos; this packages are located inside `libs` directory.
+what's going on. Additionally, you can add other packages via `git submodule`
+when it's not able to retrieve them using melpa repos; this packages are located
+inside `libs` directory.
 
 ## Supporting CSS, HTML, JS, etc.
 
